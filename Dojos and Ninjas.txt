@@ -1,0 +1,64 @@
+insert into dojos (name, created_at, updated_at)
+values ("dojo1", now(), now());
+
+insert into dojos (name, created_at, updated_at)
+values ("dojo2", now(), now());
+
+insert into dojos (name, created_at, updated_at)
+values ("dojo3", now(), now());
+
+DELETE FROM dojos
+WHERE ID = 1;
+
+DELETE FROM dojos
+WHERE ID = 2;
+
+DELETE FROM dojos
+WHERE ID = 3;
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("dojo_1", now(), now());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("dojo_2", now(), now());
+
+INSERT INTO dojos (name, created_at, updated_at)
+VALUES ("dojo_3", now(), now());
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Willy","Nelson", 70, now(), now(), 5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Tom","Hanks", 30, now(), now(), 5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Billy","Thorne", 25, now(), now(), 5);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Bob","Builder", 20, now(), now(), 6);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Bob","Marley", 50, now(), now(), 6);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Bob","Burne", 25, now(), now(), 6);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Kurt","Cobain", 60, now(), now(), 7);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Kim","Kay", 30, now(), now(), 7);
+
+INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojo_id)
+VALUES ("Samurai","Notninja", 85, now(), now(), 7);
+
+SELECT * FROM ninjas
+WHERE dojo_id = 5;
+
+SELECT * FROM ninjas
+WHERE dojo_id = 7;
+
+SELECT *
+FROM ninjas
+JOIN dojos ON ninjas.dojo_id = dojos.id
+WHERE ninjas.id = 9;
