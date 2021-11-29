@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+</head>
+<body>
+  <h1>Dojo Survey</h1>
+  <form action='/process' method='post'>
+      Your Name: <input type='text' name='name'>
+      <div>
+        Dojo location:
+            <select name='location'>
+              {% for x in cities %}
+                <option name="listofcities">{{x}}</option>
+              {% endfor %}
+            </select>
+        </div>
+        <div>
+          Favorite Language:
+            <select name='language'>
+              {% for y in languages %}
+                <option name="listoflanguages">{{y}}</option>
+              {% endfor %}
+            </select>
+        </div>
+        <div>
+          Comment:
+        </div>
+        <div>
+          <textarea cols="20" rows="3" name='comment'></textarea>
+        </div>
+        <input type='submit' value='Submit'>
+  </form>
+</body>
+</html>
